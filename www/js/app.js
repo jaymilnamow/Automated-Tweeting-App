@@ -34,7 +34,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   .state('tab.scheduledTweets', {
     url: '/scheduledTweets',
     views: {
-      'tab-scheduledTweets':{
+      'scheduledTweets':{
         templateUrl: 'templates/tab-scheduledTweets.html',
         controller: 'ScheduledTweetsCtrl'
       }
@@ -44,24 +44,24 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   .state('tab.addNew', {
     url: '/addNew',
     views: {
-      'tab-addNew': {
+      'addNew': {
         templateUrl: 'templates/tab-addNew.html',
         controller: 'AddNewCtrl'
       }
     }
   })
 
-  .state('tab.schedule', {
-    url: '/schedule',
+  .state('tab.times', {
+    url: '/times',
     views: {
-      'tab-schedule': {
-        templateUrl: 'templates/tab-schedule.html',
+      'times': {
+        templateUrl: 'templates/tab-times.html',
         controller: 'ScheduleCtrl'
       }
     }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/scheduledTweets');
+  $urlRouterProvider.otherwise('/tab/addNew');
 
 });
